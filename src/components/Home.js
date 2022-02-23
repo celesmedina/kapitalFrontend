@@ -126,17 +126,23 @@ function Home() {
 
       <div className="grid grid-rows-1 grid-cols-2 gap-7 px-40 mt-10">
         {/* Creating a card for every character found */}
-        {characters.map((character) => (
-          <Card
-            id={character.id}
-            name={character.name}
-            status={character.status}
-            location={character.location.name}
-            image={character.image}
-            species={character.species}
-            firstSeen={character.episode[0]}
-          />
-        ))}
+        {!characters && (
+          <h1 className="font-extrabold text-xl text-white">
+            No characters found, search again
+          </h1>
+        )}
+        {characters &&
+          characters.map((character) => (
+            <Card
+              id={character.id}
+              name={character.name}
+              status={character.status}
+              location={character.location.name}
+              image={character.image}
+              species={character.species}
+              firstSeen={character.episode[0]}
+            />
+          ))}
       </div>
 
       <nav className="py-10">
