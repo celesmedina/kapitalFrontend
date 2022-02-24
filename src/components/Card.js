@@ -26,12 +26,12 @@ function Card({ id, name, status, location, image, species, firstSeen }) {
   return (
     //Render of the elements of the card with the information about the characters
     <div
-      className="bg-slate-700 rounded-lg flex overflow-hidden"
+      className="bg-slate-700 rounded-lg flex overflow-hidden my-5 mx-10 sm:m-0 "
       onClick={() => handleOnClick(id)}
     >
       <img src={image} className="h-52 w-52" />
 
-      <div className="flex-col text-white pl-4 pt-3  ">
+      <div className="flex-col flex-1 text-white pl-4 pt-3  ">
         <p className="font-extrabold text-xl hover:text-blue-600"> {name}</p>
         <div className="flex items-center">
           {status === "Alive" ? (

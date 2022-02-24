@@ -92,7 +92,7 @@ function Home() {
         <select
           placeholder="Filter by Status"
           onChange={handleFilterStatus}
-          className="rounded-md"
+          className="rounded-md mx-1"
         >
           <option value=""> Status</option>
           <option value="alive"> Alive </option>
@@ -124,7 +124,7 @@ function Home() {
         </button>
       </div>
 
-      <div className="grid grid-rows-1 grid-cols-2 gap-7 px-40 mt-10">
+      <div className="grid grid-cols-1  sm:grid-rows-1 sm:grid-cols-2 sm:gap-7 sm:px-40 sm:mt-10">
         {/* Creating a card for every character found */}
         {!characters && (
           <h1 className="font-extrabold text-xl text-white">
@@ -145,9 +145,9 @@ function Home() {
           ))}
       </div>
 
-      <nav className="py-10">
-        <ul className="flex justify-center">
-          <li className="text-white  mx-4">
+      <nav className=" sm:py-10">
+        <ul className="flex flex-wrap justify-center">
+          <li className="text-white  mx-4 ">
             <button
               onClick={handleOnClickPrevious}
               className="hover:font-extrabold"
