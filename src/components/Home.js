@@ -64,6 +64,7 @@ function Home() {
     )
       .then((response) => response.json())
       .then((data) => {
+        setPage(0);
         setCharacters(data.results);
         setPages(data.info.pages);
       });
